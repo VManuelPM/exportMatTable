@@ -1,59 +1,64 @@
-# ExportExampleAngular
+# Export Example Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+This project is an example of an Angular application that allows exporting data in different formats, such as PDF and Excel, using libraries like `ngx-export-as` and `xlsx`.
 
-## Development server
+## Technologies Used
 
-To start a local development server, run:
+- **Angular**: Main framework for application development.
+- **TypeScript**: Primary language for code implementation.
+- **npm**: Package manager used to install dependencies.
+- **Material Design**: For the user interface.
+- **xlsx**: For exporting data to Excel files.
+- **file-saver**: For saving files to the user's system.
+- **ngx-export-as**: For exporting data in formats like PDF, PNG, etc.
 
-```bash
-ng serve
-```
+## Main Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. **Export to PDF**: Using `ngx-export-as`, the data table can be exported to a PDF file.
+2. **Export to Excel**: Using `xlsx`, the data table can be exported to an Excel (.xlsx) file.
+3. **Pagination**: Implemented with Angular Material's `MatPaginator`.
+4. **Interactive Table**: Using Angular Material's `MatTable` to display data.
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **`src/app/services/excel.service.ts`**: Service to handle data export to Excel.
+- **`src/app/services/export-ngx.service.ts`**: Service to handle data export with `ngx-export-as`.
+- **`src/app/app.component.ts`**: Main component containing the table logic and export buttons.
+- **`src/app/app.component.html`**: Template of the main component with the table and export buttons.
 
-```bash
-ng generate component component-name
-```
+## Installation
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. Clone this repository:
+   ```bash
+   git clone <REPOSITORY_URL>
+   cd export-example-angular
+    ```
+   
+2. Install the project dependencies:
+   ```bash
+   npm install
+    ```
 
-```bash
-ng generate --help
-```
+3. Start the development server:
+  ```bash
+  ng serve
+  Open your browser and navigate to http://localhost:4200.
+  ```
 
-## Building
+## Usage
 
-To build the project run:
+Export to PDF: Click the Export PDF (ngx-export-as) button to download the table in PDF format.
+Export to Excel: Click the Export Excel (xlsx) button to download the table in Excel (.xlsx) format.
+Pagination: Use the paginator below the table to navigate through pages of data.
+Contribution
+If you want to contribute to this project, follow these steps:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Fork the repository.
+Create a new branch for your feature or bug fix:
+git checkout -b feature/new-feature
+Make your changes and commit them:
+git commit -m "Add new feature"
+Push your changes to your repository:
+git push origin feature/new-feature
+Open a pull request in this repository.
